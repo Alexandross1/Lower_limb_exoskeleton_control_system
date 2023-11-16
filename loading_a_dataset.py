@@ -1,9 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-
-# Ścieżka do folderu zawierającego pliki CSV
-folder_path = '/content/Normal' # Zastąp 'ścieżka/do/twojego/folderu' właściwą ścieżką
+folder_path = '/content/Normal' 
 
 # Pobranie listy plików CSV w folderze
 csv_files = [file for file in os.listdir(folder_path) if file.endswith('.csv')]
