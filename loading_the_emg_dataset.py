@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Ścieżka do folderu zawierającego pliki CSV
-folder_path = '/content/Normal'  # Zastąp '/content/Normal' właściwą ścieżką
+folder_path = '/content/Normal' 
 
 # Pobranie listy plików CSV w folderze
 csv_files = [file for file in os.listdir(folder_path) if file.endswith('.csv')]
@@ -15,7 +15,7 @@ for file in csv_files:
     # Wczytanie danych z pliku CSV
     data = pd.read_csv(file_path)
 
-    emg_columns = data.columns[:-1]  # Wszystkie kolumny, pomijając ostatnią ('Flexo-Extension')
+    emg_columns = data.columns[:-1] 
 
     # Tworzenie wykresów dla każdego sygnału EMG
     for column in emg_columns:
