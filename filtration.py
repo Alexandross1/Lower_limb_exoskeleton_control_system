@@ -37,8 +37,8 @@ for file in csv_files:
         normalized_signal = (data[column] - data[column].min()) / (data[column].max() - data[column].min())
 
         # Zastosowanie filtru górnoprzepustowego
-        cutoff_frequency = 1  # Przykładowa wartość, dostosuj do potrzeb
-        sampling_rate = 120  # Przykładowa wartość, dostosuj do faktycznej częstotliwości próbkowania
+        cutoff_frequency = 1  
+        sampling_rate = 120  
         highpass_filtered_signal = highpass_filter(normalized_signal, cutoff_frequency, sampling_rate)
 
         # Odcinanie amplitud poniżej zera
