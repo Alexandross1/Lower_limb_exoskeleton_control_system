@@ -45,7 +45,7 @@ for file in csv_files:
         highpass_filtered_signal[highpass_filtered_signal < 0] = 0
 
         # Zastosowanie filtru ruchomej średniej
-        window_size = 90  # Przykładowa szerokość okna dla filtru ruchomej średniej
+        window_size = 90  
         moving_avg_filtered_signal = moving_average(highpass_filtered_signal, window_size)
 
         # Tworzenie wykresu
