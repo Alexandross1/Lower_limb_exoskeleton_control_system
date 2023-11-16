@@ -17,7 +17,7 @@ def moving_average(signal, window_size):
     return np.convolve(signal, np.ones(window_size)/window_size, mode='same')
 
 # Ścieżka do folderu zawierającego pliki CSV
-folder_path = '/content/Normal'  # Zastąp '/content/Normal' właściwą ścieżką
+folder_path = '/content/Normal'  
 
 # Pobranie listy plików CSV w folderze
 csv_files = [file for file in os.listdir(folder_path) if file.endswith('.csv')]
@@ -29,7 +29,7 @@ for file in csv_files:
     # Wczytanie danych z pliku CSV
     data = pd.read_csv(file_path)
 
-    emg_columns = data.columns[:-1]  # Wszystkie kolumny, pomijając ostatnią ('Flexo-Extension')
+    emg_columns = data.columns[:-1] 
 
     # Normalizacja i zastosowanie filtru górnoprzepustowego dla każdej kolumny sygnałów EMG
     for column in emg_columns:
